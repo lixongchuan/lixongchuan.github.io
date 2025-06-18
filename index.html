@@ -1,15 +1,143 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-CN">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="referrer" content="never" />
-    <meta name="keywords" content="程序人生,搭建个人博客" />
-    <meta name="description" content="在上文什么每个人都该有个数字自留地中讲解了为什么我们要写博客以及为什么要搭建自己的独立博客，今天我们将要撸起袖子，开始干活了。认真看完本文，按照文中的步骤去做，你将拥有一个属于你自己的博客站点。 搭建博客的几种方式 说到博客，不熟悉的人对它的印象可能是微博，QQ空间日志，以及如CSDN，博客园之类的" />
-    <meta property="og:description" content="在上文什么每个人都该有个数字自留地中讲解了为什么我们要写博客以及为什么要搭建自己的独立博客，今天我们将要撸起袖子，开始干活了。认真看完本文，按照文中的步骤去做，你将拥有一个属于你自己的博客站点。 搭建博客的几种方式 说到博客，不熟悉的人对它的印象可能是微博，QQ空间日志，以及如CSDN，博客园之类的" />
-    <meta http-equiv="Cache-Control" content="no-transform" />
-    <meta http-equiv="Cache-Control" content="no-siteapp" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>搭建个人博客系列--(2) 动手搭建自己的第一个博客站点 - 柯北(jvxiao) - 博客园</title>
-    <link rel="icon" id="favicon" href="https://assets.cnblogs.com/favicon_v3_2.ico" type="image/x-icon" />
-    <link rel="canonical" href="https://www.cnblogs.com/jvxiao/p/18907721" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的技术博客 | HTML5与CSS3入门</title>
+    <style>
+        /* 基础样式 */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        /* 头部样式 */
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            font-size: 2.2em;
+        }
+        
+        .meta {
+            color: #7f8c8d;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+        
+        /* 内容样式 */
+        article {
+            background: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            color: #3498db;
+            margin-top: 30px;
+        }
+        
+        p {
+            margin-bottom: 20px;
+        }
+        
+        code {
+            background: #f5f5f5;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: Consolas, monospace;
+        }
+        
+        pre {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        
+        /* 页脚样式 */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            
+            article {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HTML5与CSS3入门指南</h1>
+        <div class="meta">发布于 <time datetime="2023-05-15">2023年5月15日</time> · 作者: 张伟 · 阅读时间: 5分钟</div>
+    </header>
+    
+    <article>
+        <p>在现代网页开发中，HTML5和CSS3已成为构建响应式、交互式网站的基础。本文将介绍一些HTML5和CSS3的核心特性，帮助初学者快速入门。</p>
+        
+        <h2>HTML5的新特性</h2>
+        <p>HTML5引入了许多新的语义化标签，使网页结构更加清晰：</p>
+        
+        <pre><code>&lt;header&gt;定义文档或节的页眉
+&lt;nav&gt;定义导航链接
+&lt;section&gt;定义文档中的节
+&lt;article&gt;定义独立的自包含内容
+&lt;footer&gt;定义文档或节的页脚</code></pre>
+        
+        <p>这些语义化标签不仅有助于开发者理解代码，还能提升SEO效果。</p>
+        
+        <h2>CSS3的强大功能</h2>
+        <p>CSS3带来了许多令人兴奋的新特性：</p>
+        
+        <ul>
+            <li><strong>圆角边框：</strong> <code>border-radius: 10px;</code></li>
+            <li><strong>阴影效果：</strong> <code>box-shadow: 3px 3px 5px #888;</code></li>
+            <li><strong>渐变背景：</strong> <code>background: linear-gradient(to right, red, yellow);</code></li>
+            <li><strong>动画：</strong> 使用<code>@keyframes</code>规则创建动画</li>
+        </ul>
+        
+        <h2>响应式设计</h2>
+        <p>使用媒体查询可以轻松实现响应式设计：</p>
+        
+        <pre><code>@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+    .sidebar {
+        display: none;
+    }
+}</code></pre>
+        
+        <p>这样，当屏幕宽度小于600px时，字体大小会变小，侧边栏会隐藏。</p>
+        
+        <h2>总结</h2>
+        <p>HTML5和CSS3为网页开发带来了革命性的变化。掌握这些基础知识是成为前端开发者的第一步。建议读者多动手实践，尝试构建自己的网页项目。</p>
+    </article>
+    
+    <footer>
+        <p>© 2023 我的技术博客 · 保留所有权利</p>
+        <p>欢迎转载，请注明出处</p>
+    </footer>
+</body>
+</html>
